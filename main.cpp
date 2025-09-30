@@ -109,7 +109,6 @@ void doTest2(StudentManager& manager) {
     if (idx >= 0) {
         manager.modifyStudent(charlie);
     }
-
     manager.addStudent("Ana", 88.0f, 65.0f);
     manager.addStudent("Suji", 90.0f, 93.0f);
     manager.addStudent("Zhang", 100.0f, 40.0f);
