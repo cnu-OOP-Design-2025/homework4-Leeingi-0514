@@ -68,19 +68,19 @@ int StudentManager::findBestStudentInFinal() const {
 
 int StudentManager::findBestStudent() const {
     float best_score =0.0f;
-    int idx;
+    int id;
     for(int i = 0; i<num_of_students; i++){
         float score = students[i].getRecord().getMidterm() + students[i].getRecord().getFinal();
         if(score > best_score){
             best_score = score;
-            idx = i;
+            id = students[i].getID();
         } 
     }
-    return idx;
+    return id;
 }
 
 float StudentManager::getMidtermAverage() const {
-    float total_score;
+    float total_score=0;
     for(int i=0; i<num_of_students; i++){
         total_score = total_score + students[i].getRecord().getMidterm();
     }
@@ -89,7 +89,7 @@ float StudentManager::getMidtermAverage() const {
 }
 
 float StudentManager::getFinalAverage() const {
-    float total_score;
+    float total_score=0;
     for(int i=0; i<num_of_students; i++){
         total_score = total_score + students[i].getRecord().getFinal();
     }
@@ -98,7 +98,7 @@ float StudentManager::getFinalAverage() const {
 }
 
 float StudentManager::getTotalAverage() const {
-    float total_score;
+    float total_score=0;
     for(int i=0; i<num_of_students; i++){
         total_score = total_score + students[i].getRecord().getTotal();
     }
